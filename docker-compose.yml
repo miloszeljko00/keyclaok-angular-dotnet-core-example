@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:21.0.1
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    entrypoint: ["/opt/keycloak/bin/kc.sh", "start-dev"]
+    ports:
+      - 28080:8080
