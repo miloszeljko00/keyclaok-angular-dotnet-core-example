@@ -1,0 +1,16 @@
+<div *ngIf="authenticated">
+  <div *ngIf="isUser">
+    <h1>
+      User Content
+    </h1>
+  </div>
+  <div *ngIf="isAdmin">
+    <h1>
+      Admin Content
+    </h1>
+  </div>
+</div>
+<div>
+  <button *ngIf="!authenticated" (click)="login()">Login</button>
+  <button *ngIf="authenticated" (click)="logout()">Logout</button>
+</div>
